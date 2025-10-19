@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const seedProducts = require('../scripts/seedProduct');
+const dotenv = require('dotenv')
+dotenv.config()
 
 
 const connectDB = async () => {
