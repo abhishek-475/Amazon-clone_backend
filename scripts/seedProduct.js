@@ -6,268 +6,201 @@ const seedProducts = async () => {
     await Product.deleteMany({});
     
     const products = [
-      // Electronics - Smartphones
+      // Electronics - Smartphones & Accessories
       {
-        name: "Samsung Galaxy S24 Ultra",
-        description: "6.8-inch Dynamic AMOLED 2X, Snapdragon 8 Gen 3, 12GB RAM, 512GB Storage, 200MP Camera",
-        price: 129999,
+        name: "Apple iPhone 15 Pro (128 GB) - Natural Titanium",
+        description: "iPhone 15 Pro has a strong and light aerospace-grade titanium design with a textured matte-glass back. It also features a Ceramic Shield front that's tougher than any smartphone glass.",
+        price: 134900,
         category: "electronics",
-        images: ["https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bzkcins-thumb-539226511"],
-        brand: "Samsung",
-        countInStock: 15,
-        rating: 4.5,
-        numReviews: 128,
-        features: ["200MP Camera", "S Pen", "AI Features", "512GB Storage"],
+        images: [
+          "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&h=500&fit=crop",
+          "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500&h=500&fit=crop"
+        ],
+        brand: "Apple",
+        countInStock: 25,
+        rating: 4.7,
+        numReviews: 1247,
+        features: ["A17 Pro chip", "Titanium design", "48MP Main camera", "USB-C"],
         specifications: {
-          display: "6.8-inch Dynamic AMOLED",
-          processor: "Snapdragon 8 Gen 3",
-          ram: "12GB",
-          storage: "512GB",
-          camera: "200MP + 50MP + 12MP + 10MP"
-        }
+          display: "6.1-inch Super Retina XDR",
+          processor: "A17 Pro",
+          storage: "128GB",
+          camera: "48MP + 12MP + 12MP",
+          battery: "Up to 23 hours video playback"
+        },
+        isFeatured: true,
+        discount: 12
       },
       {
-        name: "iPhone 15 Pro Max",
-        description: "6.7-inch Super Retina XDR, A17 Pro chip, 256GB, Titanium design, 48MP Main camera",
-        price: 159900,
+        name: "Samsung Galaxy S24 Ultra (256 GB) - Titanium Gray",
+        description: "Meet Galaxy S24 Ultra, the ultimate tool for epic creativity and productivity. With a stunning titanium frame and our brightest display ever.",
+        price: 129999,
         category: "electronics",
-        images: ["https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692846359314"],
-        brand: "Apple",
-        countInStock: 8,
-        rating: 4.7,
-        numReviews: 95,
-        features: ["Titanium Design", "A17 Pro Chip", "Action Button", "USB-C"],
+        images: [
+          "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&h=500&fit=crop",
+          "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=500&fit=crop"
+        ],
+        brand: "Samsung",
+        countInStock: 18,
+        rating: 4.6,
+        numReviews: 892,
+        features: ["Snapdragon 8 Gen 3", "S Pen included", "200MP camera", "AI features"],
         specifications: {
-          display: "6.7-inch Super Retina XDR",
-          processor: "A17 Pro",
-          ram: "8GB",
+          display: "6.8-inch Dynamic AMOLED 2X",
+          processor: "Snapdragon 8 Gen 3",
           storage: "256GB",
-          camera: "48MP + 12MP + 12MP"
-        }
+          camera: "200MP + 50MP + 12MP + 10MP",
+          battery: "5000mAh"
+        },
+        isFeatured: true,
+        discount: 8
+      },
+      {
+        name: "OnePlus 12 (256 GB) - Silky Black",
+        description: "The OnePlus 12 features the latest Snapdragon 8 Gen 3, a professional-grade camera system, and super-fast charging.",
+        price: 69999,
+        category: "electronics",
+        images: [
+          "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&h=500&fit=crop"
+        ],
+        brand: "OnePlus",
+        countInStock: 32,
+        rating: 4.5,
+        numReviews: 567,
+        features: ["Snapdragon 8 Gen 3", "100W fast charging", "50W wireless charging", "Alert Slider"],
+        specifications: {
+          display: "6.82-inch Fluid AMOLED",
+          processor: "Snapdragon 8 Gen 3",
+          storage: "256GB",
+          camera: "50MP + 48MP + 64MP",
+          battery: "5400mAh"
+        },
+        discount: 15
       },
 
       // Electronics - Laptops
       {
-        name: "MacBook Air M3",
-        description: "13.6-inch Liquid Retina, Apple M3 chip, 8GB RAM, 256GB SSD, 18-hour battery",
+        name: "MacBook Air 13-inch with M3 chip (256GB) - Midnight",
+        description: "Supercharged by the M3 chip, MacBook Air is a world-class laptop that's incredibly fast and powerful.",
         price: 114900,
         category: "electronics",
-        images: ["https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-midnight-select-202402?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1708367461037"],
+        images: [
+          "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&h=500&fit=crop"
+        ],
         brand: "Apple",
-        countInStock: 12,
-        rating: 4.6,
-        numReviews: 67,
-        features: ["M3 Chip", "18-hour Battery", "Fanless Design", "macOS"],
+        countInStock: 15,
+        rating: 4.8,
+        numReviews: 734,
+        features: ["M3 chip", "13.6-inch Liquid Retina", "Up to 18 hours battery", "Fanless design"],
         specifications: {
           display: "13.6-inch Liquid Retina",
           processor: "Apple M3",
-          ram: "8GB",
+          memory: "8GB",
           storage: "256GB SSD",
-          battery: "18 hours"
-        }
+          battery: "Up to 18 hours"
+        },
+        isFeatured: true
       },
       {
-        name: "Dell XPS 13 Plus",
-        description: "13.4-inch OLED, Intel Core i7, 16GB RAM, 512GB SSD, Windows 11 Pro",
+        name: "Dell XPS 13 Plus (512GB SSD, 16GB RAM) - Platinum Silver",
+        description: "The Dell XPS 13 Plus offers a minimalist design with invisible trackpad and capacitive touch function row.",
         price: 149990,
         category: "electronics",
-        images: ["https://i.dell.com/is/image/DellContent/content/dam/ss2/products/notebooks/xps/13-9320/media-gallery/notebook-xps-13plus-9320-t-tp-platinum-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3333&hei=3333&qlt=100,0&resMode=sharp2&size=3333,3333"],
+        images: [
+          "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=500&h=500&fit=crop"
+        ],
         brand: "Dell",
-        countInStock: 6,
+        countInStock: 8,
         rating: 4.4,
-        numReviews: 42,
-        features: ["OLED Display", "Intel Core i7", "Invisible Trackpad", "Premium Build"],
+        numReviews: 289,
+        features: ["12th Gen Intel Core i7", "OLED display", "16GB RAM", "512GB SSD"],
         specifications: {
           display: "13.4-inch OLED",
-          processor: "Intel Core i7",
-          ram: "16GB",
+          processor: "Intel Core i7-1260P",
+          memory: "16GB",
           storage: "512GB SSD",
-          os: "Windows 11 Pro"
+          os: "Windows 11 Home"
         }
       },
 
       // Home & Kitchen
       {
-        name: "Philips Air Fryer XXL",
-        description: "XXL Family Size, Rapid Air Technology, 7.3L Capacity, Digital Display, 1400W",
-        price: 14999,
+        name: "Instant Pot Duo Plus 9-in-1 Electric Pressure Cooker",
+        description: "9-in-1 multi-functional cooker that pressure cooks, slow cooks, rice cooker, yogurt maker, cake maker, and more.",
+        price: 8999,
         category: "home & kitchen",
-        images: ["https://www.philips.co.in/c-dam/b2c/category-pages/kitchen/airfryer/hd9280-91-gallery-01.jpg"],
-        brand: "Philips",
-        countInStock: 25,
-        rating: 4.3,
-        numReviews: 156,
-        features: ["7.3L Capacity", "Rapid Air Technology", "Digital Display", "Fat Removal Technology"],
+        images: [
+          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=500&fit=crop"
+        ],
+        brand: "Instant Pot",
+        countInStock: 45,
+        rating: 4.6,
+        numReviews: 1563,
+        features: ["9-in-1 functionality", "6-quart capacity", "13 smart programs", "Stainless steel pot"],
         specifications: {
-          capacity: "7.3 Liters",
-          power: "1400W",
-          presetPrograms: "7",
-          warranty: "2 years"
-        }
+          capacity: "6 Quarts",
+          programs: "13 Smart Programs",
+          material: "Stainless Steel",
+          warranty: "1 year"
+        },
+        discount: 20
       },
       {
-        name: "Prestige Omega Select Plus Cooker",
-        description: "7 Litre Pressure Cooker, 3-ply bottom, stainless steel, induction compatible",
-        price: 3299,
+        name: "Ninja Air Fryer MAX XL (5.5 Quart)",
+        description: "The Ninja Air Fryer MAX XL allows you to air fry, roast, reheat, and dehydrate, creating delicious, better-for-you meals.",
+        price: 7999,
         category: "home & kitchen",
-        images: ["https://www.prestigesmartkitchen.com/cdn/shop/products/7L-Prestige-Omega-Select-Plus-Cooker_800x.jpg?v=1643874835"],
-        brand: "Prestige",
-        countInStock: 50,
-        rating: 4.2,
-        numReviews: 89,
-        features: ["7L Capacity", "3-ply Bottom", "Induction Compatible", "Stainless Steel"],
+        images: [
+          "https://images.unsplash.com/photo-1554866585-cd94860834b1?w=500&h=500&fit=crop"
+        ],
+        brand: "Ninja",
+        countInStock: 38,
+        rating: 4.5,
+        numReviews: 892,
+        features: ["5.5-quart capacity", "Air fry, roast, reheat", "Dehydrate function", "Dishwasher safe"],
         specifications: {
-          capacity: "7 Liters",
-          material: "Stainless Steel",
-          base: "3-ply bottom",
-          compatibility: "All stoves including induction"
+          capacity: "5.5 Quarts",
+          functions: "Air Fry, Roast, Reheat, Dehydrate",
+          power: "1750W",
+          warranty: "1 year"
         }
       },
 
-      // Fashion - Men's Clothing
+      // Fashion - Clothing
       {
-        name: "Levi's Men's 511 Slim Fit Jeans",
-        description: "Slim fit jeans with stretch, regular waist, available in multiple colors",
+        name: "Levi's Men's 511 Slim Fit Jeans - Dark Stonewash",
+        description: "Classic slim fit jeans with stretch for all-day comfort. Perfect for casual wear.",
         price: 2999,
         category: "fashion",
-        images: ["https://lsco.scene7.com/is/image/lsco/045112370-front-pdp?fmt=jpeg&qlt=70,1&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=2086"],
+        images: [
+          "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop"
+        ],
         brand: "Levi's",
-        countInStock: 30,
-        rating: 4.1,
-        numReviews: 234,
-        features: ["Slim Fit", "Stretch Denim", "Multiple Colors", "Regular Waist"],
+        countInStock: 60,
+        rating: 4.3,
+        numReviews: 2347,
+        features: ["Slim fit", "Stretch denim", "Regular waist", "Multiple colors"],
         specifications: {
           fit: "Slim",
           material: "98% Cotton, 2% Elastane",
           closure: "Zip Fly",
           care: "Machine Wash"
-        }
+        },
+        discount: 25
       },
       {
-        name: "Nike Men's Air Force 1 Shoes",
-        description: "Classic white sneakers, leather upper, rubber sole, iconic design",
-        price: 7595,
+        name: "Nike Men's Dri-FIT Sport T-shirt - Black",
+        description: "The Nike Dri-FIT T-shirt helps keep you dry and comfortable with sweat-wicking technology.",
+        price: 1499,
         category: "fashion",
-        images: ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-force-1-07-shoes-WrLlWX.png"],
+        images: [
+          "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop"
+        ],
         brand: "Nike",
-        countInStock: 18,
-        rating: 4.5,
-        numReviews: 189,
-        features: ["Leather Upper", "Air Sole Unit", "Rubber Sole", "Classic Design"],
-        specifications: {
-          material: "Leather",
-          sole: "Rubber",
-          closure: "Lace-up",
-          style: "Low-top"
-        }
-      },
-
-      // Beauty & Personal Care
-      {
-        name: "Philips Beard Trimmer Series 7000",
-        description: "Cordless beard trimmer, 20 length settings, 120 min runtime, waterproof",
-        price: 3499,
-        category: "beauty",
-        images: ["https://www.philips.co.in/c-dam/b2c/category-pages/personal-care/male-grooming/beard-styler/bt7210-15-gallery-01.jpg"],
-        brand: "Philips",
-        countInStock: 22,
+        countInStock: 85,
         rating: 4.4,
-        numReviews: 76,
-        features: ["20 Length Settings", "120 Min Runtime", "Waterproof", "Self-sharpening Blades"],
-        specifications: {
-          runtime: "120 minutes",
-          chargeTime: "1 hour",
-          settings: "20 length settings",
-          waterproof: "Yes"
-        }
-      },
-      {
-        name: "Mamaearth Onion Hair Oil",
-        description: "With onion & coconut oil, reduces hair fall, promotes hair growth, 200ml",
-        price: 399,
-        category: "beauty",
-        images: ["https://images.mamaearth.in/catalog/product/o/n/onion_oil_200ml_1_.jpg"],
-        brand: "Mamaearth",
-        countInStock: 100,
-        rating: 4.0,
-        numReviews: 456,
-        features: ["Reduces Hair Fall", "Promotes Growth", "With Onion Oil", "Sulfate Free"],
-        specifications: {
-          volume: "200ml",
-          keyIngredients: "Onion Oil, Coconut Oil",
-          hairType: "All Hair Types",
-          parabenFree: "Yes"
-        }
-      },
-
-      // Books
-      {
-        name: "Atomic Habits by James Clear",
-        description: "An Easy & Proven Way to Build Good Habits & Break Bad Ones",
-        price: 399,
-        category: "books",
-        images: ["https://m.media-amazon.com/images/I/81bGKUa1e0L._AC_UF1000,1000_QL80_.jpg"],
-        brand: "Penguin",
-        countInStock: 45,
-        rating: 4.8,
-        numReviews: 1234,
-        features: ["Paperback", "320 Pages", "English Language", "Self-help"],
-        specifications: {
-          format: "Paperback",
-          pages: "320",
-          language: "English",
-          publisher: "Penguin"
-        }
-      },
-      {
-        name: "Ikigai: The Japanese secret to a long and happy life",
-        description: "Find your purpose and live longer with Japanese wisdom",
-        price: 299,
-        category: "books",
-        images: ["https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UF1000,1000_QL80_.jpg"],
-        brand: "Penguin",
-        countInStock: 38,
-        rating: 4.3,
-        numReviews: 567,
-        features: ["Paperback", "208 Pages", "English Language", "Self-help"],
-        specifications: {
-          format: "Paperback",
-          pages: "208",
-          language: "English",
-          publisher: "Penguin"
-        }
-      },
-
-      // Sports & Fitness
-      {
-        name: "Yonex Astrox 88D Pro Badminton Racket",
-        description: "Professional badminton racket, stiff flex, head heavy balance",
-        price: 18990,
-        category: "sports",
-        images: ["https://www.yonex.com/media/catalog/product/cache/9e5ec8c4c6d9f2f4d4a9a8a8a8a8a8a8/a/s/astrox88d_pro_1.jpg"],
-        brand: "Yonex",
-        countInStock: 8,
-        rating: 4.7,
-        numReviews: 34,
-        features: ["Stiff Flex", "Head Heavy", "Aero+ Box Frame", "Rotational Generator System"],
-        specifications: {
-          weight: "3U (85-89g)",
-          balance: "Head Heavy",
-          flex: "Stiff",
-          gripSize: "G4, G5"
-        }
-      },
-      {
-        name: "Nike Dri-FIT Training T-shirt",
-        description: "Men's training t-shirt, moisture-wicking, breathable fabric",
-        price: 1999,
-        category: "sports",
-        images: ["https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f5b87dde-6b4c-4a8a-8a8a-8a8a8a8a8a8a/dri-fit-training-t-shirt-7JvFQZ.png"],
-        brand: "Nike",
-        countInStock: 25,
-        rating: 4.2,
-        numReviews: 78,
-        features: ["Dri-FIT Technology", "Moisture Wicking", "Breathable", "Regular Fit"],
+        numReviews: 1567,
+        features: ["Dri-FIT technology", "Moisture wicking", "Breathable fabric", "Regular fit"],
         specifications: {
           material: "100% Polyester",
           fit: "Regular",
@@ -276,79 +209,218 @@ const seedProducts = async () => {
         }
       },
 
+      // Beauty & Personal Care
+      {
+        name: "Philips Series 7000 Wet and Dry Electric Shaver",
+        description: "The Philips Series 7000 shaver provides a smooth shave with its FlexTouch technology and can be used wet or dry.",
+        price: 5499,
+        category: "beauty",
+        images: [
+          "https://images.unsplash.com/photo-1594736797933-d0d69c3bc2db?w=500&h=500&fit=crop"
+        ],
+        brand: "Philips",
+        countInStock: 28,
+        rating: 4.5,
+        numReviews: 678,
+        features: ["Wet and dry use", "FlexTouch technology", "8-direction flex heads", "Quick charge"],
+        specifications: {
+          runtime: "60 minutes",
+          chargeTime: "1 hour",
+          waterproof: "Yes",
+          warranty: "2 years"
+        },
+        discount: 18
+      },
+      {
+        name: "Dyson Supersonic Hair Dryer - Nickel/Copper",
+        description: "The Dyson Supersonic hair dryer is engineered to protect hair from extreme heat damage with intelligent heat control.",
+        price: 29900,
+        category: "beauty",
+        images: [
+          "https://images.unsplash.com/photo-1594736797933-d0d69c3bc2db?w=500&h=500&fit=crop"
+        ],
+        brand: "Dyson",
+        countInStock: 12,
+        rating: 4.7,
+        numReviews: 456,
+        features: ["Intelligent heat control", "Fast drying", "Hair protection", "Magnetic attachments"],
+        specifications: {
+          power: "1600W",
+          attachments: "4 Magnetic attachments",
+          heatSettings: "4",
+          speedSettings: "4"
+        }
+      },
+
+      // Books
+      {
+        name: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+        description: "No matter your goals, Atomic Habits offers a proven framework for improving - every day.",
+        price: 399,
+        category: "books",
+        images: [
+          "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&h=500&fit=crop"
+        ],
+        brand: "Penguin",
+        countInStock: 120,
+        rating: 4.8,
+        numReviews: 23456,
+        features: ["Paperback", "320 pages", "English language", "Self-help"],
+        specifications: {
+          format: "Paperback",
+          pages: "320",
+          language: "English",
+          publisher: "Penguin"
+        },
+        isFeatured: true
+      },
+      {
+        name: "The Psychology of Money: Timeless lessons on wealth, greed, and happiness",
+        description: "Doing well with money isn't necessarily about what you know. It's about how you behave.",
+        price: 349,
+        category: "books",
+        images: [
+          "https://images.unsplash.com/photo-1589998059171-988d887df646?w=500&h=500&fit=crop"
+        ],
+        brand: "Harriman House",
+        countInStock: 95,
+        rating: 4.7,
+        numReviews: 12345,
+        features: ["Paperback", "256 pages", "English language", "Personal finance"],
+        specifications: {
+          format: "Paperback",
+          pages: "256",
+          language: "English",
+          publisher: "Harriman House"
+        }
+      },
+
+      // Sports & Fitness
+      {
+        name: "Fitbit Charge 6 Fitness Tracker - Black",
+        description: "Track your heart rate, sleep, activity, and stress with the most accurate Fitbit tracker yet.",
+        price: 12999,
+        category: "sports",
+        images: [
+          "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop"
+        ],
+        brand: "Fitbit",
+        countInStock: 42,
+        rating: 4.4,
+        numReviews: 2341,
+        features: ["24/7 heart rate tracking", "Sleep tracking", "Stress management", "6+ days battery"],
+        specifications: {
+          display: "AMOLED",
+          batteryLife: "Up to 7 days",
+          waterproof: "Up to 50m",
+          connectivity: "Bluetooth"
+        },
+        discount: 10
+      },
+      {
+        name: "Yoga Mat Premium TPE Material 6mm - Purple",
+        description: "High-quality TPE yoga mat with excellent cushioning and non-slip surface for all types of yoga.",
+        price: 1999,
+        category: "sports",
+        images: [
+          "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=500&fit=crop"
+        ],
+        brand: "Gorilla Mats",
+        countInStock: 75,
+        rating: 4.6,
+        numReviews: 1567,
+        features: ["6mm thickness", "Non-slip surface", "TPE material", "Lightweight"],
+        specifications: {
+          material: "TPE",
+          thickness: "6mm",
+          size: "183cm x 61cm",
+          weight: "1.2kg"
+        }
+      },
+
       // Grocery
       {
-        name: "Fortune Sunflower Oil",
-        description: "Pure sunflower oil, 5L bottle, rich in Vitamin E, cholesterol free",
+        name: "Organic Quinoa, 2 lb - Ancient Harvest",
+        description: "Premium organic quinoa, a complete protein source, gluten-free and non-GMO.",
         price: 899,
         category: "grocery",
-        images: ["https://www.bigbasket.com/media/uploads/p/l/40126957_2-fortune-sun-lite-sunflower-refined-oil.jpg"],
-        brand: "Fortune",
-        countInStock: 60,
-        rating: 4.1,
-        numReviews: 345,
-        features: ["Pure Sunflower Oil", "Rich in Vitamin E", "Cholesterol Free", "5L Bottle"],
+        images: [
+          "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&h=500&fit=crop"
+        ],
+        brand: "Ancient Harvest",
+        countInStock: 200,
+        rating: 4.5,
+        numReviews: 4567,
+        features: ["Organic", "Gluten-free", "Non-GMO", "Complete protein"],
         specifications: {
-          quantity: "5 Liters",
-          type: "Refined Oil",
-          ingredients: "100% Sunflower Oil",
-          shelfLife: "12 months"
+          weight: "2 lb (907g)",
+          ingredients: "100% Organic Quinoa",
+          certification: "USDA Organic",
+          shelfLife: "24 months"
         }
       },
       {
-        name: "Amul Butter",
-        description: "Pure butter, 500g packet, made from fresh cream, rich taste",
-        price: 275,
+        name: "Extra Virgin Olive Oil - 1 Liter - Filippo Berio",
+        description: "Premium extra virgin olive oil, cold extracted, perfect for cooking and dressings.",
+        price: 1299,
         category: "grocery",
-        images: ["https://www.amul.com/products/images/butter.png"],
-        brand: "Amul",
-        countInStock: 80,
+        images: [
+          "https://images.unsplash.com/photo-1531386450457-57c7f6370033?w=500&h=500&fit=crop"
+        ],
+        brand: "Filippo Berio",
+        countInStock: 150,
         rating: 4.6,
-        numReviews: 678,
-        features: ["Pure Butter", "Made from Fresh Cream", "Rich Taste", "500g Packet"],
+        numReviews: 3456,
+        features: ["Extra virgin", "Cold extracted", "Rich flavor", "Versatile use"],
         specifications: {
-          quantity: "500g",
-          type: "Salted Butter",
-          ingredients: "Milk, Salt",
-          shelfLife: "6 months"
-        }
+          volume: "1 Liter",
+          type: "Extra Virgin Olive Oil",
+          extraction: "Cold Pressed",
+          origin: "Italy"
+        },
+        discount: 15
       },
 
       // Toys & Games
       {
-        name: "LEGO Classic Creative Brick Box",
-        description: "221 pieces, creative building set, multiple colors, storage box",
-        price: 1999,
+        name: "LEGO Star Wars Millennium Falcon Building Kit",
+        description: "Build the most famous ship in the galaxy with this detailed LEGO Millennium Falcon model.",
+        price: 8999,
         category: "toys",
-        images: ["https://www.lego.com/cdn/cs/set/assets/blt77a0c5f27c1e894e/11018.png"],
+        images: [
+          "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=500&h=500&fit=crop"
+        ],
         brand: "LEGO",
         countInStock: 15,
-        rating: 4.5,
-        numReviews: 123,
-        features: ["221 Pieces", "Multiple Colors", "Storage Box", "Age 4+"],
+        rating: 4.9,
+        numReviews: 234,
+        features: ["1353 pieces", "Ages 9+", "Collector's item", "Display model"],
         specifications: {
-          pieces: "221",
-          ageRange: "4-99 years",
-          theme: "Classic",
-          boxDimensions: "26.2 x 14.1 x 7.1 cm"
-        }
+          pieces: "1353",
+          ageRange: "9+ years",
+          dimensions: "33cm x 22cm x 8cm",
+          theme: "Star Wars"
+        },
+        isFeatured: true
       },
       {
-        name: "Monopoly Classic Board Game",
-        description: "Family board game, buying and trading properties, for 2-6 players",
-        price: 1499,
+        name: "Monopoly: Marvel Avengers Edition Board Game",
+        description: "Assemble your favorite Avengers and battle for control of iconic locations from the Marvel Universe.",
+        price: 2499,
         category: "toys",
-        images: ["https://m.media-amazon.com/images/I/81qyVdHOcYL._AC_UF1000,1000_QL80_.jpg"],
+        images: [
+          "https://images.unsplash.com/photo-1632501641765-e568d28b001b?w=500&h=500&fit=crop"
+        ],
         brand: "Hasbro",
-        countInStock: 20,
-        rating: 4.3,
-        numReviews: 89,
-        features: ["Classic Edition", "2-6 Players", "Family Game", "Ages 8+"],
+        countInStock: 35,
+        rating: 4.5,
+        numReviews: 567,
+        features: ["Marvel Avengers theme", "2-6 players", "Ages 8+", "Collector tokens"],
         specifications: {
           players: "2-6",
           ageRange: "8+ years",
           gameTime: "60+ minutes",
-          contents: "Game board, cards, tokens, money"
+          theme: "Marvel Avengers"
         }
       }
     ];
