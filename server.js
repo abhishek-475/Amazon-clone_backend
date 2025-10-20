@@ -15,6 +15,7 @@ app.use(express.json());
 app.use('/api/products', require('./routes/products'));
 app.use('/api/payments', require('./routes/payments'));
 app.use('/api/orders', require('./routes/orders'));
+app.use('/api/users', require('./routes/users'))
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI , {
